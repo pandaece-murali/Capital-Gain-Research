@@ -192,7 +192,7 @@ export default function CapitalGainsLandingPage() {
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.3-.6.3l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.96z" />
               </svg>
-              <span>Join Free</span>
+              <span>Join Free Telegram Group</span>
             </a>
           </div>
         </div>
@@ -391,9 +391,8 @@ export default function CapitalGainsLandingPage() {
             {coverageItems.map((item, idx) => (
               <article
                 key={idx}
-                className={`bg-white rounded-xl overflow-hidden border border-gray-200/90 shadow-2xs hover:shadow-xs transition-all flex flex-col group ${
-                  idx === 4 ? "md:col-span-2 lg:col-span-2" : ""
-                }`}
+                className={`bg-white rounded-xl overflow-hidden border border-gray-200/90 shadow-2xs hover:shadow-xs transition-all flex flex-col group ${idx === 4 ? "md:col-span-2 lg:col-span-2" : ""
+                  }`}
               >
                 <div className="relative h-40 sm:h-44 w-full overflow-hidden bg-gray-100">
                   <img
