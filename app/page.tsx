@@ -115,11 +115,11 @@ export default function CapitalGainsLandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FBFDFB] text-[#141A16] font-sans antialiased selection:bg-[#0E441F] selection:text-white pb-24 sm:pb-0">
+    <div className="min-h-screen bg-[#FBFDFB] text-[#141A16] font-sans antialiased selection:bg-[#0E441F] selection:text-white pb-20 sm:pb-0">
       {/* Top Regulatory Compliance Banner */}
       <aside
         aria-label="SEBI Regulatory Status"
-        className="bg-[#0E441F] text-white text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-[#166A31] flex flex-wrap items-center justify-center gap-2"
+        className="bg-[#0E441F] text-white text-xs sm:text-sm py-1.5 px-4 text-center font-medium border-b border-[#166A31] flex flex-wrap items-center justify-center gap-2"
       >
         <span className="inline-flex items-center gap-1.5 bg-[#166A31] px-2 py-0.5 rounded-full text-[11px] uppercase tracking-wider font-semibold">
           <svg
@@ -143,13 +143,13 @@ export default function CapitalGainsLandingPage() {
 
       {/* Main Navigation with Official Logo */}
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-xs transition-all">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between">
           {/* Brand Logo & Name */}
           <a href="#" className="flex items-center gap-3 group">
             <img
               src="/Logo.jpeg"
               alt="Capital Gains Research Logo"
-              className="h-12 w-auto max-w-[130px] sm:max-w-[170px] object-contain rounded-lg shadow-2xs group-hover:scale-105 transition-transform"
+              className="h-10 sm:h-12 w-auto max-w-[130px] sm:max-w-[170px] object-contain rounded-lg shadow-2xs group-hover:scale-105 transition-transform"
             />
             <div className="hidden sm:flex flex-col">
               <span className="font-extrabold text-base lg:text-lg tracking-tight text-gray-950 leading-tight">
@@ -187,7 +187,7 @@ export default function CapitalGainsLandingPage() {
               onClick={handleTelegramClick}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#0E441F] hover:bg-[#166A31] text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-2.5 rounded-xl transition-all shadow-sm hover:shadow active:scale-95 cursor-pointer"
+              className="inline-flex items-center gap-2 bg-[#0E441F] hover:bg-[#166A31] text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 rounded-xl transition-all shadow-sm hover:shadow active:scale-95 cursor-pointer"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.3-.6.3l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.96z" />
@@ -198,8 +198,8 @@ export default function CapitalGainsLandingPage() {
         </div>
       </header>
 
-      {/* 1. HERO SECTION */}
-      <section className="relative overflow-hidden pt-8 pb-16 sm:pt-14 sm:pb-24 bg-gradient-to-b from-[#F2F7F3] via-white to-[#FBFDFB]">
+      {/* 1. HERO SECTION (Compact spacing, logo badge removed) */}
+      <section className="relative overflow-hidden pt-6 pb-8 sm:pt-8 sm:pb-12 bg-gradient-to-b from-[#F2F7F3] via-white to-[#FBFDFB]">
         {/* Subtle decorative grid background */}
         <div
           className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -212,58 +212,44 @@ export default function CapitalGainsLandingPage() {
         />
 
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Logo badge display */}
-          <div className="flex justify-center mb-5">
-            <div className="p-2 bg-white rounded-2xl border border-gray-200/90 shadow-sm inline-flex items-center gap-3">
-              <img
-                src="/Logo.jpeg"
-                alt="Capital Gains Research Logo"
-                className="h-10 sm:h-12 w-auto object-contain rounded-xl"
-              />
-              <span className="text-xs font-bold text-[#0E441F] tracking-wider uppercase pr-2">
-                Official Research Portal
-              </span>
-            </div>
-          </div>
-
           {/* SEBI Registered Research Analyst Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#E7F3E9] border border-[#BBDCBF] px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold text-[#0E441F] mb-6 shadow-xs animate-fade-in">
+          <div className="inline-flex items-center gap-2 bg-[#E7F3E9] border border-[#BBDCBF] px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold text-[#0E441F] mb-4 shadow-xs">
             <span className="w-2 h-2 rounded-full bg-[#0E441F] animate-ping" />
             <span className="uppercase tracking-wider">SEBI REGISTERED RESEARCH ANALYST</span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-950 tracking-tight leading-[1.18] mb-6 max-w-4xl mx-auto">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.18] mb-3 max-w-4xl mx-auto">
             Indian Stock Market Updates, Explained Simply.
           </h1>
 
           {/* Subheading & Explanation */}
-          <p className="text-base sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-6 font-normal">
+          <p className="text-sm sm:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed mb-2 font-normal">
             Explore Indian stock market developments, company earnings, IPO announcements and educational insights into technical analysis.
           </p>
 
-          <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto mb-6 leading-relaxed">
             Follow Capital Gains Research on Telegram for informative market updates and simplified explanations of important developments.
           </p>
 
           {/* Section 1 CTA: Hero Primary Action */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-5">
             <a
               href={TELEGRAM_LINK}
               onClick={handleTelegramClick}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#0E441F] hover:bg-[#166A31] text-white text-base sm:text-lg font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all group cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#0E441F] hover:bg-[#166A31] text-white text-sm sm:text-base font-bold px-7 py-3 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all group cursor-pointer"
             >
               <svg
-                className="w-6 h-6 fill-white group-hover:scale-110 transition-transform"
+                className="w-5 h-5 fill-white group-hover:scale-110 transition-transform"
                 viewBox="0 0 24 24"
               >
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.3-.6.3l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.96z" />
               </svg>
               <span>JOIN FREE TELEGRAM GROUP</span>
               <svg
-                className="w-5 h-5 text-emerald-300 group-hover:translate-x-1 transition-transform"
+                className="w-4 h-4 text-emerald-300 group-hover:translate-x-1 transition-transform"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -279,9 +265,9 @@ export default function CapitalGainsLandingPage() {
           </div>
 
           {/* Trust Credential Line */}
-          <div className="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-gray-600 bg-white/70 py-2 px-4 rounded-full border border-gray-200/80 w-fit mx-auto">
+          <div className="flex flex-wrap items-center justify-center gap-2 text-xs font-semibold text-gray-600 bg-white/70 py-1.5 px-3 rounded-full border border-gray-200/80 w-fit mx-auto">
             <svg
-              className="w-4 h-4 text-[#0E441F]"
+              className="w-3.5 h-3.5 text-[#0E441F]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -304,41 +290,41 @@ export default function CapitalGainsLandingPage() {
           </div>
 
           {/* Quick Stats / Highlights Bar */}
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 max-w-4xl mx-auto">
-            <div className="bg-white p-4 rounded-xl border border-gray-200/90 shadow-2xs">
-              <div className="text-xl sm:text-2xl font-extrabold text-[#0E441F]">100% Free</div>
-              <div className="text-xs text-gray-600 font-medium">Educational Focus</div>
+          <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 max-w-4xl mx-auto">
+            <div className="bg-white p-3 rounded-xl border border-gray-200/90 shadow-2xs">
+              <div className="text-lg sm:text-xl font-extrabold text-[#0E441F]">100% Free</div>
+              <div className="text-[11px] sm:text-xs text-gray-600 font-medium">Educational Focus</div>
             </div>
-            <div className="bg-white p-4 rounded-xl border border-gray-200/90 shadow-2xs">
-              <div className="text-xl sm:text-2xl font-extrabold text-[#0E441F]">Daily</div>
-              <div className="text-xs text-gray-600 font-medium">Market Updates</div>
+            <div className="bg-white p-3 rounded-xl border border-gray-200/90 shadow-2xs">
+              <div className="text-lg sm:text-xl font-extrabold text-[#0E441F]">Daily</div>
+              <div className="text-[11px] sm:text-xs text-gray-600 font-medium">Market Updates</div>
             </div>
-            <div className="bg-white p-4 rounded-xl border border-gray-200/90 shadow-2xs">
-              <div className="text-xl sm:text-2xl font-extrabold text-[#0E441F]">Primary</div>
-              <div className="text-xs text-gray-600 font-medium">IPO Research</div>
+            <div className="bg-white p-3 rounded-xl border border-gray-200/90 shadow-2xs">
+              <div className="text-lg sm:text-xl font-extrabold text-[#0E441F]">Primary</div>
+              <div className="text-[11px] sm:text-xs text-gray-600 font-medium">IPO Research</div>
             </div>
-            <div className="bg-white p-4 rounded-xl border border-gray-200/90 shadow-2xs">
-              <div className="text-xl sm:text-2xl font-extrabold text-[#0E441F]">Official</div>
-              <div className="text-xs text-gray-600 font-medium">SEBI Registered</div>
+            <div className="bg-white p-3 rounded-xl border border-gray-200/90 shadow-2xs">
+              <div className="text-lg sm:text-xl font-extrabold text-[#0E441F]">Official</div>
+              <div className="text-[11px] sm:text-xs text-gray-600 font-medium">SEBI Registered</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* 2. ABOUT US SECTION */}
-      <section id="about" className="py-16 sm:py-20 bg-white border-y border-gray-200">
+      <section id="about" className="py-6 sm:py-10 bg-white border-y border-gray-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-10">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#0E441F] bg-[#E7F3E9] px-3 py-1 rounded-full">
+          <div className="max-w-3xl mx-auto text-center mb-5">
+            <span className="text-[11px] font-bold uppercase tracking-widest text-[#0E441F] bg-[#E7F3E9] px-2.5 py-0.5 rounded-full">
               About Capital Gains Research
             </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-950 mt-3 tracking-tight">
+            <h2 className="text-xl sm:text-3xl font-extrabold text-gray-950 mt-2 tracking-tight">
               Making Market Information Easier to Understand.
             </h2>
           </div>
 
-          <div className="bg-[#F8FAF8] rounded-2xl p-6 sm:p-10 border border-[#E1EAE2] shadow-xs space-y-5 text-base sm:text-lg text-gray-700 leading-relaxed">
-            <p className="font-semibold text-gray-900 text-lg sm:text-xl">
+          <div className="bg-[#F8FAF8] rounded-xl p-5 sm:p-7 border border-[#E1EAE2] shadow-xs space-y-3.5 text-sm sm:text-base text-gray-700 leading-relaxed">
+            <p className="font-semibold text-gray-900 text-base sm:text-lg">
               Capital Gains Research focuses on providing informative research and educational content related to the Indian stock market.
             </p>
             <p>
@@ -348,35 +334,35 @@ export default function CapitalGainsLandingPage() {
               Our approach focuses on research, information and simplified explanations of market-related developments.
             </p>
 
-            <div className="pt-4 flex flex-wrap items-center gap-4 text-sm font-semibold text-gray-800 border-t border-gray-200">
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#0E441F]" />
+            <div className="pt-3 flex flex-wrap items-center gap-3 text-xs sm:text-sm font-semibold text-gray-800 border-t border-gray-200">
+              <div className="flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-[#0E441F]" />
                 SEBI Registered Research Analyst (Individual)
               </div>
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#0E441F]" />
+              <div className="flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-[#0E441F]" />
                 Educational Research & Market Insights
               </div>
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#0E441F]" />
+              <div className="flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-[#0E441F]" />
                 Policy & Regulations Conscious
               </div>
             </div>
 
             {/* Section 2 CTA: About Us */}
-            <div className="pt-4 flex justify-center sm:justify-start">
+            <div className="pt-2 flex justify-center sm:justify-start">
               <a
                 href={TELEGRAM_LINK}
                 onClick={handleTelegramClick}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 bg-[#0E441F] hover:bg-[#166A31] text-white text-sm sm:text-base font-bold px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 bg-[#0E441F] hover:bg-[#166A31] text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl shadow-sm hover:shadow transition-all cursor-pointer"
               >
-                <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
+                <svg className="w-3.5 h-3.5 fill-white" viewBox="0 0 24 24">
                   <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.3-.6.3l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.96z" />
                 </svg>
                 <span>JOIN FREE TELEGRAM GROUP</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
               </a>
@@ -386,30 +372,30 @@ export default function CapitalGainsLandingPage() {
       </section>
 
       {/* 3. WHAT WE COVER SECTION */}
-      <section id="coverage" className="py-16 sm:py-24 bg-[#FAFBFA]">
+      <section id="coverage" className="py-6 sm:py-10 bg-[#FAFBFA]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#0E441F] bg-[#E7F3E9] px-3 py-1 rounded-full">
+          <div className="text-center max-w-3xl mx-auto mb-6">
+            <span className="text-[11px] font-bold uppercase tracking-widest text-[#0E441F] bg-[#E7F3E9] px-2.5 py-0.5 rounded-full">
               What We Cover
             </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-950 mt-3 tracking-tight">
+            <h2 className="text-xl sm:text-3xl font-extrabold text-gray-950 mt-2 tracking-tight">
               Explore Our Market Research & Educational Content.
             </h2>
-            <p className="text-sm sm:text-base text-gray-600 mt-3">
+            <p className="text-xs sm:text-sm text-gray-600 mt-1.5">
               Structured breakdowns designed to make complex market data simple and accessible for everyone.
             </p>
           </div>
 
           {/* 5 Content Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {coverageItems.map((item, idx) => (
               <article
                 key={idx}
-                className={`bg-white rounded-2xl overflow-hidden border border-gray-200/90 shadow-sm hover:shadow-md transition-all flex flex-col group ${
+                className={`bg-white rounded-xl overflow-hidden border border-gray-200/90 shadow-2xs hover:shadow-xs transition-all flex flex-col group ${
                   idx === 4 ? "md:col-span-2 lg:col-span-2" : ""
                 }`}
               >
-                <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-gray-100">
+                <div className="relative h-40 sm:h-44 w-full overflow-hidden bg-gray-100">
                   <img
                     src={item.img}
                     alt={item.alt}
@@ -419,20 +405,20 @@ export default function CapitalGainsLandingPage() {
                       (e.currentTarget as HTMLImageElement).src = fallbackSvg;
                     }}
                   />
-                  <span className="absolute top-3 left-3 bg-[#0E441F] text-white text-[11px] font-bold px-2.5 py-1 rounded-md shadow-xs">
+                  <span className="absolute top-2.5 left-2.5 bg-[#0E441F] text-white text-[10px] font-bold px-2 py-0.5 rounded-md shadow-2xs">
                     {item.tag}
                   </span>
                 </div>
-                <div className="p-6 flex-1 flex flex-col justify-between">
+                <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-950 mb-2">
+                    <h3 className="text-base sm:text-lg font-bold text-gray-950 mb-1.5">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
-                  <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-[#0E441F] font-bold">
+                  <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-[#0E441F] font-bold">
                     <span>{item.footer}</span>
                     <a
                       href={TELEGRAM_LINK}
@@ -441,7 +427,7 @@ export default function CapitalGainsLandingPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 hover:underline cursor-pointer"
                     >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                       </svg>
                     </a>
@@ -452,15 +438,15 @@ export default function CapitalGainsLandingPage() {
           </div>
 
           {/* Section 3 CTA: What We Cover */}
-          <div className="mt-12 text-center">
+          <div className="mt-6 sm:mt-8 text-center">
             <a
               href={TELEGRAM_LINK}
               onClick={handleTelegramClick}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[#0E441F] hover:bg-[#166A31] text-white text-base font-bold px-8 py-4 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer"
+              className="inline-flex items-center gap-2.5 bg-[#0E441F] hover:bg-[#166A31] text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-xl shadow-sm hover:shadow transition-all cursor-pointer"
             >
-              <svg className="w-5 h-5 fill-white" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.3-.6.3l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.96z" />
               </svg>
               <span>JOIN FREE TELEGRAM GROUP FOR ALL UPDATES</span>
@@ -470,29 +456,29 @@ export default function CapitalGainsLandingPage() {
       </section>
 
       {/* 4. WHY FOLLOW CAPITAL GAINS RESEARCH */}
-      <section id="why-us" className="py-16 sm:py-24 bg-white border-y border-gray-200">
+      <section id="why-us" className="py-6 sm:py-10 bg-white border-y border-gray-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#0E441F] bg-[#E7F3E9] px-3 py-1 rounded-full">
+          <div className="text-center max-w-3xl mx-auto mb-6">
+            <span className="text-[11px] font-bold uppercase tracking-widest text-[#0E441F] bg-[#E7F3E9] px-2.5 py-0.5 rounded-full">
               Value for Followers
             </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-950 mt-3 tracking-tight">
+            <h2 className="text-xl sm:text-3xl font-extrabold text-gray-950 mt-2 tracking-tight">
               Market Information. Simplified for Better Understanding.
             </h2>
-            <p className="text-base sm:text-lg text-gray-700 mt-4 leading-relaxed">
+            <p className="text-xs sm:text-sm text-gray-700 mt-2 leading-relaxed">
               Our Telegram channel brings together informative content and market-related developments in one place.
             </p>
           </div>
 
           {/* Key Checklist Points */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3.5 mb-6">
             {whyPoints.map((point, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-5 rounded-xl bg-[#F8FAF8] border border-gray-200/80 hover:border-[#BBDCBF] transition-colors"
+                className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F8FAF8] border border-gray-200/80 hover:border-[#BBDCBF] transition-colors"
               >
-                <div className="w-7 h-7 rounded-full bg-[#0E441F] text-white flex items-center justify-center shrink-0 mt-0.5">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <div className="w-5 h-5 rounded-full bg-[#0E441F] text-white flex items-center justify-center shrink-0 mt-0.5">
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                     <path
                       fillRule="evenodd"
                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -500,7 +486,7 @@ export default function CapitalGainsLandingPage() {
                     />
                   </svg>
                 </div>
-                <span className="text-base font-semibold text-gray-900 leading-snug">
+                <span className="text-xs sm:text-sm font-semibold text-gray-900 leading-snug">
                   {point}
                 </span>
               </div>
@@ -514,9 +500,9 @@ export default function CapitalGainsLandingPage() {
               onClick={handleTelegramClick}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[#0E441F] hover:bg-[#166A31] text-white text-base sm:text-lg font-bold px-8 py-4 rounded-xl shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer"
+              className="inline-flex items-center gap-2.5 bg-[#0E441F] hover:bg-[#166A31] text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-xl shadow-sm hover:shadow transition-all active:scale-98 cursor-pointer"
             >
-              <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.3-.6.3l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.96z" />
               </svg>
               <span>EXPLORE OUR FREE TELEGRAM GROUP</span>
@@ -526,38 +512,38 @@ export default function CapitalGainsLandingPage() {
       </section>
 
       {/* 5. OUR APPROACH */}
-      <section id="approach" className="py-16 sm:py-24 bg-[#F8FAF8]">
+      <section id="approach" className="py-6 sm:py-10 bg-[#F8FAF8]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#0E441F] bg-[#E7F3E9] px-3 py-1 rounded-full">
+          <div className="text-center max-w-3xl mx-auto mb-6">
+            <span className="text-[11px] font-bold uppercase tracking-widest text-[#0E441F] bg-[#E7F3E9] px-2.5 py-0.5 rounded-full">
               Our Methodology
             </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-950 mt-3 tracking-tight">
+            <h2 className="text-xl sm:text-3xl font-extrabold text-gray-950 mt-2 tracking-tight">
               Research. Understand. Stay Informed.
             </h2>
-            <p className="text-sm sm:text-base text-gray-600 mt-3">
+            <p className="text-xs sm:text-sm text-gray-600 mt-1.5">
               A structured, educational-first methodology designed for transparency and long-term financial awareness.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 mb-6">
             {approachItems.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white p-8 rounded-2xl border border-gray-200/90 shadow-sm relative flex flex-col justify-between"
+                className="bg-white p-5 sm:p-6 rounded-xl border border-gray-200/90 shadow-2xs relative flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-[#E7F3E9] text-[#0E441F] flex items-center justify-center font-extrabold text-xl mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-[#E7F3E9] text-[#0E441F] flex items-center justify-center font-extrabold text-base mb-3">
                     {item.num}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-950 mb-3">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-950 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-semibold text-[#0E441F]">
+                <div className="mt-4 pt-3 border-t border-gray-100 flex items-center gap-1.5 text-xs font-semibold text-[#0E441F]">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#0E441F]" />
                   {item.tag}
                 </div>
@@ -572,9 +558,9 @@ export default function CapitalGainsLandingPage() {
               onClick={handleTelegramClick}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[#0E441F] hover:bg-[#166A31] text-white text-base font-bold px-8 py-4 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer"
+              className="inline-flex items-center gap-2.5 bg-[#0E441F] hover:bg-[#166A31] text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-xl shadow-sm hover:shadow transition-all cursor-pointer"
             >
-              <svg className="w-5 h-5 fill-white" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.3-.6.3l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.96z" />
               </svg>
               <span>JOIN OUR FREE TELEGRAM GROUP</span>
@@ -584,26 +570,26 @@ export default function CapitalGainsLandingPage() {
       </section>
 
       {/* 6. CONNECT WITH US ON TELEGRAM (PRIMARY CONVERSION SECTION) */}
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-[#0E441F] via-[#092C14] to-[#0E441F] text-white">
+      <section className="py-8 sm:py-12 bg-gradient-to-br from-[#0E441F] via-[#092C14] to-[#0E441F] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6 backdrop-blur-xs">
-            <svg className="w-9 h-9 fill-white" viewBox="0 0 24 24">
+          <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-3 backdrop-blur-xs">
+            <svg className="w-7 h-7 fill-white" viewBox="0 0 24 24">
               <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.3-.6.3l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.96z" />
             </svg>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
+          <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight mb-2">
             Stay Connected With Capital Gains Research.
           </h2>
 
-          <p className="text-base sm:text-lg text-emerald-100/90 max-w-2xl mx-auto mb-3 leading-relaxed">
+          <p className="text-xs sm:text-base text-emerald-100/90 max-w-2xl mx-auto mb-2 leading-relaxed">
             Explore market-related information, company updates and educational insights through our official Telegram channel.
           </p>
-          <p className="text-sm sm:text-base text-emerald-200/80 max-w-xl mx-auto mb-8">
+          <p className="text-xs sm:text-sm text-emerald-200/80 max-w-xl mx-auto mb-4">
             Join the channel to access our latest published content.
           </p>
 
-          <div className="inline-block bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-2 text-xs sm:text-sm text-emerald-200 mb-8 font-medium">
+          <div className="inline-block bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-3 py-1.5 text-xs text-emerald-200 mb-5 font-medium">
             Telegram channel: <strong className="text-white">Official Capital Gains Research channel</strong>
           </div>
 
@@ -614,14 +600,14 @@ export default function CapitalGainsLandingPage() {
               onClick={handleTelegramClick}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-white text-[#0E441F] hover:bg-emerald-50 text-base sm:text-lg font-extrabold px-8 sm:px-10 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all active:scale-95 group cursor-pointer"
+              className="inline-flex items-center justify-center gap-2.5 bg-white text-[#0E441F] hover:bg-emerald-50 text-sm sm:text-base font-extrabold px-7 sm:px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all active:scale-95 group cursor-pointer"
             >
-              <svg className="w-6 h-6 fill-[#0E441F]" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 fill-[#0E441F]" viewBox="0 0 24 24">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.3-.6.3l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.96z" />
               </svg>
               <span>JOIN OUR TELEGRAM CHANNEL</span>
               <svg
-                className="w-5 h-5 text-[#0E441F] group-hover:translate-x-1 transition-transform"
+                className="w-4 h-4 text-[#0E441F] group-hover:translate-x-1 transition-transform"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -636,56 +622,56 @@ export default function CapitalGainsLandingPage() {
             </a>
           </div>
 
-          <div className="mt-6 text-xs text-emerald-200/70">
+          <div className="mt-4 text-[11px] sm:text-xs text-emerald-200/70">
             Free Educational Content • No Unsolicited Spam • Direct Market Insights
           </div>
         </div>
       </section>
 
       {/* 7. REGISTRATION DETAILS (NO PHONE, EMAIL, OR ADDRESS) */}
-      <section id="registration" className="py-16 sm:py-20 bg-white">
+      <section id="registration" className="py-6 sm:py-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#0E441F] bg-[#E7F3E9] px-3 py-1 rounded-full">
+          <div className="text-center mb-5">
+            <span className="text-[11px] font-bold uppercase tracking-widest text-[#0E441F] bg-[#E7F3E9] px-2.5 py-0.5 rounded-full">
               Verified Regulatory Credentials
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-950 mt-3">
+            <h2 className="text-xl sm:text-3xl font-extrabold text-gray-950 mt-2">
               Registration Information
             </h2>
-            <p className="text-sm text-gray-600 mt-2">
+            <p className="text-xs sm:text-sm text-gray-600 mt-1">
               Official entity records for Capital Gains Research under SEBI (Research Analysts) Regulations.
             </p>
           </div>
 
-          <div className="border border-gray-300 rounded-2xl overflow-hidden shadow-xs bg-white mb-8">
-            <div className="bg-[#0E441F] text-white p-5 flex flex-wrap items-center justify-between gap-4">
+          <div className="border border-gray-300 rounded-xl overflow-hidden shadow-2xs bg-white mb-5">
+            <div className="bg-[#0E441F] text-white p-4 flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-3">
                 <img
                   src="/Logo.jpeg"
                   alt="Capital Gains Research"
-                  className="h-10 w-auto rounded-lg bg-white p-0.5 object-contain"
+                  className="h-9 w-auto rounded-lg bg-white p-0.5 object-contain"
                 />
                 <div>
-                  <h3 className="font-extrabold text-lg sm:text-xl">
+                  <h3 className="font-extrabold text-base sm:text-lg">
                     Capital Gains Research
                   </h3>
-                  <p className="text-xs uppercase tracking-wider text-emerald-200 font-semibold">
+                  <p className="text-[10px] sm:text-xs uppercase tracking-wider text-emerald-200 font-semibold">
                     SEBI REGISTERED RESEARCH ANALYST
                   </p>
                 </div>
               </div>
-              <div className="bg-[#166A31] px-3 py-1.5 rounded-lg text-xs font-mono font-bold tracking-wider">
+              <div className="bg-[#166A31] px-2.5 py-1 rounded-md text-xs font-mono font-bold tracking-wider">
                 INH000030986
               </div>
             </div>
 
             <div className="divide-y divide-gray-200">
-              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 sm:px-6 text-sm bg-gray-50/50">
+              <div className="grid grid-cols-1 sm:grid-cols-3 p-3 sm:px-5 text-xs sm:text-sm bg-gray-50/50">
                 <span className="font-bold text-gray-700">Details</span>
                 <span className="sm:col-span-2 font-bold text-gray-900">Information</span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 sm:px-6 text-sm hover:bg-gray-50/50 transition-colors">
+              <div className="grid grid-cols-1 sm:grid-cols-3 p-3 sm:px-5 text-xs sm:text-sm hover:bg-gray-50/50 transition-colors">
                 <span className="font-semibold text-gray-600">Registration No.</span>
                 <span className="sm:col-span-2 font-mono font-bold text-gray-950 flex items-center gap-2">
                   <span>INH000030986</span>
@@ -698,19 +684,19 @@ export default function CapitalGainsLandingPage() {
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 sm:px-6 text-sm hover:bg-gray-50/50 transition-colors">
+              <div className="grid grid-cols-1 sm:grid-cols-3 p-3 sm:px-5 text-xs sm:text-sm hover:bg-gray-50/50 transition-colors">
                 <span className="font-semibold text-gray-600">Registration Type</span>
                 <span className="sm:col-span-2 text-gray-900 font-medium">Individual</span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 sm:px-6 text-sm hover:bg-gray-50/50 transition-colors">
+              <div className="grid grid-cols-1 sm:grid-cols-3 p-3 sm:px-5 text-xs sm:text-sm hover:bg-gray-50/50 transition-colors">
                 <span className="font-semibold text-gray-600">Regulatory Body</span>
                 <span className="sm:col-span-2 text-gray-900 font-medium">
                   Securities and Exchange Board of India (SEBI)
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 sm:px-6 text-sm hover:bg-gray-50/50 transition-colors">
+              <div className="grid grid-cols-1 sm:grid-cols-3 p-3 sm:px-5 text-xs sm:text-sm hover:bg-gray-50/50 transition-colors">
                 <span className="font-semibold text-gray-600">Compliance Category</span>
                 <span className="sm:col-span-2 text-gray-900 font-medium">
                   Research Analyst (Regulations, 2014)
@@ -726,9 +712,9 @@ export default function CapitalGainsLandingPage() {
               onClick={handleTelegramClick}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 bg-[#0E441F] hover:bg-[#166A31] text-white text-sm sm:text-base font-bold px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 bg-[#0E441F] hover:bg-[#166A31] text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded-xl shadow-sm hover:shadow transition-all cursor-pointer"
             >
-              <svg className="w-5 h-5 fill-white" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.3-.6.3l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.96z" />
               </svg>
               <span>JOIN OFFICIAL TELEGRAM CHANNEL</span>
@@ -738,23 +724,23 @@ export default function CapitalGainsLandingPage() {
       </section>
 
       {/* 8. REGULATORY DISCLAIMER */}
-      <section className="py-12 sm:py-16 bg-[#F4F6F4] border-t border-gray-200">
+      <section className="py-6 sm:py-8 bg-[#F4F6F4] border-t border-gray-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 shadow-2xs space-y-4 mb-8">
+          <div className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 shadow-2xs space-y-3 mb-5">
             <div className="flex items-center gap-2 text-[#0E441F]">
-              <svg className="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   fillRule="evenodd"
                   d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
                   clipRule="evenodd"
                 />
               </svg>
-              <h3 className="font-extrabold text-base sm:text-lg text-gray-950 uppercase tracking-wider">
+              <h3 className="font-extrabold text-sm sm:text-base text-gray-950 uppercase tracking-wider">
                 Important Disclaimer
               </h3>
             </div>
 
-            <div className="text-xs sm:text-sm text-gray-600 space-y-3 leading-relaxed">
+            <div className="text-[11px] sm:text-xs text-gray-600 space-y-2 leading-relaxed">
               <p>
                 Capital Gains Research is a SEBI Registered Research Analyst (Registration No.: INH000030986).
               </p>
@@ -780,7 +766,7 @@ export default function CapitalGainsLandingPage() {
               onClick={handleTelegramClick}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 bg-[#0E441F] hover:bg-[#166A31] text-white text-sm sm:text-base font-bold px-7 py-3 rounded-xl shadow-sm hover:shadow transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 bg-[#0E441F] hover:bg-[#166A31] text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded-xl shadow-2xs hover:shadow-xs transition-all cursor-pointer"
             >
               <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.3-.6.3l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.96z" />
@@ -792,38 +778,38 @@ export default function CapitalGainsLandingPage() {
       </section>
 
       {/* 9. FOOTER (NO PHONE, EMAIL, OR ADDRESS) */}
-      <footer className="bg-[#092C14] text-gray-300 py-12 sm:py-16 border-t border-[#166A31]">
+      <footer className="bg-[#092C14] text-gray-300 py-6 sm:py-8 border-t border-[#166A31]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
             {/* Col 1: Identity & Logo */}
             <div>
-              <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-center gap-2.5 mb-2">
                 <img
                   src="/Logo.jpeg"
                   alt="Capital Gains Research Logo"
-                  className="h-11 w-auto rounded-lg bg-white p-1 object-contain"
+                  className="h-9 w-auto rounded-lg bg-white p-0.5 object-contain"
                 />
-                <span className="font-extrabold text-lg text-white tracking-tight">
+                <span className="font-extrabold text-base sm:text-lg text-white tracking-tight">
                   CAPITAL GAINS RESEARCH
                 </span>
               </div>
-              <p className="text-xs text-gray-400 font-semibold mb-1">
+              <p className="text-xs text-gray-400 font-semibold mb-0.5">
                 SEBI Registered Research Analyst
               </p>
               <p className="text-xs text-emerald-400 font-mono font-medium">
                 Reg. No.: INH000030986
               </p>
-              <p className="text-xs text-gray-400 mt-2">
+              <p className="text-xs text-gray-400 mt-1.5">
                 Educational Market Insights & Research
               </p>
             </div>
 
             {/* Col 2: Official Telegram Channel */}
             <div>
-              <h4 className="font-bold text-sm text-white uppercase tracking-wider mb-3">
+              <h4 className="font-bold text-xs sm:text-sm text-white uppercase tracking-wider mb-2">
                 Official Telegram
               </h4>
-              <p className="text-xs text-gray-300 leading-relaxed mb-4">
+              <p className="text-xs text-gray-300 leading-relaxed mb-3">
                 Access market updates, earnings breakdowns, IPO observations, and educational chart analysis.
               </p>
               <a
@@ -831,7 +817,7 @@ export default function CapitalGainsLandingPage() {
                 onClick={handleTelegramClick}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#166A31] hover:bg-[#0E441F] text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-lg border border-emerald-500/30 transition-all shadow-sm cursor-pointer"
+                className="inline-flex items-center gap-2 bg-[#166A31] hover:bg-[#0E441F] text-white text-xs sm:text-sm font-bold px-3.5 py-2 rounded-lg border border-emerald-500/30 transition-all shadow-2xs cursor-pointer"
               >
                 <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
                   <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.3-.6.3l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.96z" />
@@ -842,37 +828,37 @@ export default function CapitalGainsLandingPage() {
 
             {/* Col 3: Quick Navigation */}
             <div>
-              <h4 className="font-bold text-sm text-white uppercase tracking-wider mb-3">
+              <h4 className="font-bold text-xs sm:text-sm text-white uppercase tracking-wider mb-2">
                 Quick Navigation
               </h4>
-              <div className="flex flex-wrap gap-2 text-xs">
+              <div className="flex flex-wrap gap-1.5 text-xs">
                 <a
                   href="#about"
-                  className="bg-white/10 hover:bg-white/20 text-gray-200 px-3 py-1.5 rounded-md transition-colors"
+                  className="bg-white/10 hover:bg-white/20 text-gray-200 px-2.5 py-1 rounded-md transition-colors"
                 >
                   About Us
                 </a>
                 <a
                   href="#coverage"
-                  className="bg-white/10 hover:bg-white/20 text-gray-200 px-3 py-1.5 rounded-md transition-colors"
+                  className="bg-white/10 hover:bg-white/20 text-gray-200 px-2.5 py-1 rounded-md transition-colors"
                 >
                   What We Cover
                 </a>
                 <a
                   href="#why-us"
-                  className="bg-white/10 hover:bg-white/20 text-gray-200 px-3 py-1.5 rounded-md transition-colors"
+                  className="bg-white/10 hover:bg-white/20 text-gray-200 px-2.5 py-1 rounded-md transition-colors"
                 >
                   Why Follow Us
                 </a>
                 <a
                   href="#approach"
-                  className="bg-white/10 hover:bg-white/20 text-gray-200 px-3 py-1.5 rounded-md transition-colors"
+                  className="bg-white/10 hover:bg-white/20 text-gray-200 px-2.5 py-1 rounded-md transition-colors"
                 >
                   Our Approach
                 </a>
                 <a
                   href="#registration"
-                  className="bg-white/10 hover:bg-white/20 text-gray-200 px-3 py-1.5 rounded-md transition-colors"
+                  className="bg-white/10 hover:bg-white/20 text-gray-200 px-2.5 py-1 rounded-md transition-colors"
                 >
                   SEBI Details
                 </a>
@@ -880,7 +866,7 @@ export default function CapitalGainsLandingPage() {
             </div>
           </div>
 
-          <div className="pt-8 border-t border-white/10 text-center text-xs text-gray-400 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="pt-4 border-t border-white/10 text-center text-xs text-gray-400 flex flex-col sm:flex-row items-center justify-between gap-3">
             <p>© 2026 Capital Gains Research. All Rights Reserved.</p>
             <p className="text-[11px] text-gray-500">
               Compliant Educational Content • Meta Ads Ready • Regulated Financial Research
@@ -892,7 +878,7 @@ export default function CapitalGainsLandingPage() {
       {/* Sticky Telegram Conversion Bar (Desktop & Mobile) */}
       <aside
         aria-label="Join Telegram conversion bar"
-        className="fixed bottom-0 inset-x-0 z-50 bg-[#0E441F]/95 backdrop-blur-md border-t border-[#166A31] py-3 px-4 shadow-2xl flex items-center justify-between gap-3 text-white"
+        className="fixed bottom-0 inset-x-0 z-50 bg-[#0E441F]/95 backdrop-blur-md border-t border-[#166A31] py-2.5 px-4 shadow-2xl flex items-center justify-between gap-3 text-white"
       >
         <div className="flex items-center gap-3 min-w-0">
           <img
@@ -919,7 +905,7 @@ export default function CapitalGainsLandingPage() {
           onClick={handleTelegramClick}
           target="_blank"
           rel="noopener noreferrer"
-          className="shrink-0 inline-flex items-center gap-2 bg-white text-[#0E441F] hover:bg-emerald-50 active:scale-95 text-xs sm:text-sm font-extrabold px-4 sm:px-6 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition-all cursor-pointer"
+          className="shrink-0 inline-flex items-center gap-2 bg-white text-[#0E441F] hover:bg-emerald-50 active:scale-95 text-xs sm:text-sm font-extrabold px-4 sm:px-6 py-2 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer"
         >
           <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-[#0E441F]" viewBox="0 0 24 24">
             <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.3-.6.3l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.96z" />
