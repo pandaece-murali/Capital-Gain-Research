@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 // Telegram link configuration - fallback safe
-const TELEGRAM_LINK = "https://t.me/capitalgainsresearch";
+const TELEGRAM_LINK = "https://t.me/cpgainsresearch";
 
 // Fallback SVG graphic if external images are ever unreachable
 const fallbackSvg =
